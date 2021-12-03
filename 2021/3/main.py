@@ -29,8 +29,7 @@ for column in range(len(table[0])):
         gamma.append(0)
         epsilon.append(1)
 
-print("Power Consumption = " +
-      str(binary_to_decimal(gamma)*binary_to_decimal(epsilon)))
+print("Power Consumption = " + str(binary_to_decimal(gamma)*binary_to_decimal(epsilon)))
 
 # PART TWO
 
@@ -46,7 +45,7 @@ while len(table) > 1 and column < len(table[0]):
 
     table = list(filter(lambda row: row[column] == common_bit, table))
     column += 1
-oxygen = list(table)
+oxygen = binary_to_decimal(table[0])
 
 # cO2 levels
 table = list(save_list)
@@ -60,7 +59,6 @@ while len(table) > 1 and column < len(table[0]):
 
     table = list(filter(lambda row: row[column] == common_bit, table))
     column += 1
-cO2 = list(table)
+cO2 = binary_to_decimal(table[0])
 
-print("Life support rating = " +
-      str(binary_to_decimal(oxygen[0])*binary_to_decimal(cO2[0])))
+print("Life support rating = " + str(cO2*oxygen))
