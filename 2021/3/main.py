@@ -7,6 +7,7 @@ for line in lines:
     line = list(map(int, line))
     table.append(line)
 
+
 def binary_to_decimal(list):
     sum = 0
     power = 0
@@ -14,6 +15,7 @@ def binary_to_decimal(list):
         sum += i * 2 ** power
         power += 1
     return sum
+
 
 # PART ONE
 gamma = []
@@ -60,6 +62,5 @@ while len(table) > 1 and column < len(table[0]):
     column += 1
 cO2 = list(table)
 
-print("Life support rating = " + str(binary_to_decimal(oxygen[0])*binary_to_decimal(cO2[0])))
-
-
+print("Life support rating = " +
+      str(binary_to_decimal(oxygen[0])*binary_to_decimal(cO2[0])))
